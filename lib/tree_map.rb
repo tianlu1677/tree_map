@@ -1,6 +1,3 @@
 require "tree_map/version"
-
-module TreeMap
-  class Error < StandardError; end
-  # Your code goes here...
-end
+require 'treemap/tree_map'
+require 'treemap/bounded_map'

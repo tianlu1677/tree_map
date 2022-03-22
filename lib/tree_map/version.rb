@@ -1,3 +1,3 @@
-module TreeMap
+class TreeMap
   VERSION = "1.0.4"
 end

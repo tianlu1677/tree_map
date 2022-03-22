@@ -13,8 +13,6 @@ Gem::Specification.new do |spec|
   spec.homepage      = "https://github.com/tianlu1677/tree_map"
   spec.license       = "MIT"
 
-  spec.metadata["allowed_push_host"] = "https://github.com/tianlu1677/tree_map"
-
   spec.metadata["homepage_uri"] = spec.homepage
   spec.metadata["source_code_uri"] = "https://github.com/tianlu1677/tree_map."
   spec.metadata["changelog_uri"] = "https://github.com/tianlu1677/tree_map."

@@ -1,3 +1,3 @@
 require "tree_map/version"
-require 'treemap/tree_map'
-require 'treemap/bounded_map'
+require 'tree_map/tree_map'
+require 'tree_map/bounded_map'

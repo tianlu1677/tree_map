@@ -1,43 +1,66 @@
-# TreeMap
+# tree_map
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/tree_map`. To experiment with that code, run `bin/console` for an interactive prompt.
 
-TODO: Delete this and the text above, and describe your gem
+This is an AVL tree based implementation of Java's java.util.TreeMap structure.
 
-## Installation
+It implements Java's java.util.NavigableMap interface.
 
-Add this line to your application's Gemfile:
+learn a lot from [treemap](https://github.com/davidkellis/treemap/)
 
-```ruby
-gem 'tree_map'
+### References:
+- Reference java implementation: https://android.googlesource.com/platform/libcore.git/+/android-6.0.1_r32/luni/src/main/java/java/util/TreeMap.java
+
+
+### Install
+```
+gem install tree_map
 ```
 
-And then execute:
 
-    $ bundle
+### Usage
+In IRB (some lines elided):
+```
+irb(main):001:0> require 'treemap'
+=> true
+irb(main):002:0> m = TreeMap.new; nil
+=> nil
+irb(main):003:0> m.put(1, "foo")
+=> nil
+irb(main):004:0> m.put(100, "baz")
+=> nil
+irb(main):005:0> m.put(10, "bar")
+=> nil
+irb(main):006:0> m.each {|k, v| puts "#{k} -> #{v}" }
+1 -> foo
+10 -> bar
+100 -> baz
+=> nil
+irb(main):007:0> m.to_a
+=> [[1, "foo"], [10, "bar"], [100, "baz"]]
+irb(main):008:0> m.keys
+=> #<Set: {1, 10, 100}>
+irb(main):009:0> m.values
+=> ["foo", "bar", "baz"]
+irb(main):010:0> m.first_key
+=> 1
+irb(main):011:0> m.last_key
+=> 100
+irb(main):012:0> m.lower_key(10)
+=> 1
+irb(main):013:0> m.floor_key(10)
+=> 10
+irb(main):014:0> m.ceiling_key(10)
+=> 10
+irb(main):015:0> m.higher_key(10)
+=> 100
+```
 
-Or install it yourself as:
 
-    $ gem install tree_map
-
-## Usage
-
-TODO: Write usage instructions here
-
-## Development
-
-After checking out the repo, run `bin/setup` to install dependencies. Then, run `rake test` to run the tests. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
-
-To install this gem onto your local machine, run `bundle exec rake install`. To release a new version, update the version number in `version.rb`, and then run `bundle exec rake release`, which will create a git tag for the version, push git commits and tags, and push the `.gem` file to [rubygems.org](https://rubygems.org).
-
-## Contributing
-
-Bug reports and pull requests are welcome on GitHub at https://github.com/[USERNAME]/tree_map. This project is intended to be a safe, welcoming space for collaboration, and contributors are expected to adhere to the [Contributor Covenant](http://contributor-covenant.org) code of conduct.
-
-## License
-
-The gem is available as open source under the terms of the [MIT License](https://opensource.org/licenses/MIT).
-
-## Code of Conduct
-
-Everyone interacting in the TreeMap project’s codebases, issue trackers, chat rooms and mailing lists is expected to follow the [code of conduct](https://github.com/[USERNAME]/tree_map/blob/master/CODE_OF_CONDUCT.md).
+### Run Tests:
+```
+rake
+```
+OR
+```
+rake test
+```
